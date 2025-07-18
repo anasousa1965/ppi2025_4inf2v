@@ -23,7 +23,7 @@
 
 .header1 {
   grid-area: header1;
-  background-color: darkslateblue;
+  background-color: rgb(75, 59, 179);
 }
 
 .header2 {
