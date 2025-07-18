@@ -23,5 +23,5 @@ export default function App() {
         {/* Add more routes as needed */}
       </Routes>
     </>
-  );
+  )
 }
