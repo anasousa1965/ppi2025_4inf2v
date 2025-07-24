@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import styles from "./Header.module.css";
 import { ShoppingBasket } from "lucide-react";
 
-export function Header({ cart }) {
+export function Header() {
   return (
     <header className={styles.header}>
       <Link to="/"><h1>TRJ Megastore</h1></Link>
