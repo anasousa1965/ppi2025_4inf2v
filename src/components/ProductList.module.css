@@ -3,8 +3,10 @@
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  gap: 2rem;
+  margin: 5rem 0;
+   gap: 2rem;
 }
+
 
 .grid {
   /* height: 100vh; */
