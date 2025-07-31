@@ -6,7 +6,7 @@ export function Product({ product }) {
 
   const { addToCart } = useContext(CartContext);
 
-  return (
+   return (
     <div className={styles.productCard}>
       <img
         src={product.thumbnail}
@@ -22,7 +22,7 @@ export function Product({ product }) {
         className={styles.productButton}
         onClick={() => {
           addToCart(product);
-          }}
+      }}
       >
         ADD TO CART
       </button>

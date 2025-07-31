@@ -12,9 +12,9 @@ export function Cart() {
         <p>Your cart is empty.</p>
       ) : (
         <ul>
-          {cart.map((product, index) => (
-            <li key={index} className={styles.cartItem}>
-              <img src={product.thumbnail} alt={product.title} />
+         {cart.map((product, index) => (
+          <li key={index} className={styles.cartItem}>
+             <img src={product.thumbnail} alt={product.title} />
               <h3>{product.title}</h3>
               <p>${product.price.toFixed(2)}</p>
               <div className={styles.quantity}>
@@ -22,7 +22,7 @@ export function Cart() {
                   onClick={() =>
                     updateQtyCart(product.id, product.quantity - 1)
                   }
-                  disabled={product.quantity <= 1}
+                   disabled={product.quantity <= 1}
                 >
                   -
                 </button>
@@ -35,12 +35,10 @@ export function Cart() {
                   +
                 </button>
               </div>
-              </li>
+            </li>
           ))}
         </ul>
       )}
     </div>
   );
 }
-   
-             
