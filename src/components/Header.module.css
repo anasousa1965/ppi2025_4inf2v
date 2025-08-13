@@ -1,22 +1,72 @@
-.header {
-  background-color: var(--gray-900);
-  color: var(--primary);
-  padding: 1rem;
-  text-align: center;
-  height: 5rem;
+.container { 
   display: flex;
-  justify-content: space-between;
   align-items: center;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background-color: var(--primary-dark);
+  color: var(--primary-contrast-dark);
 }
 
-.header a {
-  color: var(--primary);
+.container h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--primary-contrast-dark);
+}
+
+.cartInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 2rem;
+  background-color: var(--primary-light);
+  color: var(--primary-contrast-dark);
+  padding: 1rem 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
   text-decoration: none;
+}
+
+.cartInfo:hover {
+  background-color: var(--primary);
+}
+
+.logo {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .container h1 {
+    font-size: 2rem;
+  }
+
+  .cartInfo {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .loginButton {
+  font-size: 3rem; 
+  padding: 10px 16px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loginButton:hover {
+  background-color: #eee;
+}
+
 }

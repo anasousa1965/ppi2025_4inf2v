@@ -11,12 +11,12 @@ export function ProductList({ addToCart }) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-        
+
   const [searchTerm, setSearchTerm] = useState(""); 
   useEffect(() => {
     async function fetchProducts() {
       try {
-          const response = await fetch(apiUrl);
+        const response = await fetch(apiUrl);
         const data = await response.json();
         setProducts(data.products);
       } catch (error) {
@@ -30,15 +30,15 @@ export function ProductList({ addToCart }) {
     }, 100);
   }, []);
 
-
-         const filteredProducts = products.filter((product) =>
+  
+  const filteredProducts = products.filter((product) =>
     product.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
     <div className={styles.container}>
 
-    <div style={{ textAlign: "center", margin: "1rem 0" }}>
+       <div style={{ textAlign: "center", margin: "1rem 0" }}>
         <input
           type="text"
           placeholder="Search products..."
@@ -56,7 +56,7 @@ export function ProductList({ addToCart }) {
       </div>
 
       <div className={styles.grid}>
-        {filteredProducts.map((product) => (
+         {filteredProducts.map((product) => (
           <Product key={product.id} product={product} addToCart={addToCart} />
         ))}
       </div>
@@ -64,7 +64,8 @@ export function ProductList({ addToCart }) {
       {loading && (
         <div>
           <CircularProgress
-            thickness={5}
+
+           thickness={5}
             style={{ margin: "2rem auto", display: "block" }}
             sx={{
               color: "#001111",
