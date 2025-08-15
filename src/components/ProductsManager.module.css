@@ -1,0 +1,169 @@
+.container {
+    display: flex;
+  flex-direction: column;
+  padding: 6rem; /* Maior padding */
+  gap: 40px; /* Maior espaçamento */
+  background-color: var(--gray-100);
+  min-height: 100vh;
+}
+
+h2 {
+  text-align: center;
+  font-size: 4rem; /* Título maior */
+  color: var(--primary-dark);
+  margin-bottom: 2rem;
+}
+
+.formSection,
+.listSection {
+  background-color: white;
+  padding: 40px; /* Maior padding */
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.formSection:hover,
+.listSection:hover {
+  transform: translateY(-5px);
+}
+
+.formSection h3,
+.listSection h3 {
+  font-size: 2.5rem; /* Título da seção maior */
+  margin-bottom: 25px;
+  color: var(--primary-dark);
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-dark);
+  font-weight: bold;
+}
+
+.input,
+.textarea {
+  padding: 12px;
+  border: 2px solid var(--gray-300);
+  border-radius: 8px;
+  width: 100%;
+  font-size: 1.5rem;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.button {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: bold;
+    background-color: var(--primary);
+    color: white;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--primary-dark);
+}
+
+.cancelButton {
+  padding: 15px;
+  border: 2px solid var(--gray-400);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: bold;
+  background-color: transparent;
+  color: var(--gray-700);
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.cancelButton:hover {
+  background-color: var(--gray-200);
+}
+
+.productList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.productItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--gray-300);
+  background-color: var(--gray-100);
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.productItem:hover {
+  transform: scale(1.01);
+}
+
+.productInfo p {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--primary-dark);
+}
+
+.productInfo p strong {
+  font-size: 1.8rem;
+}
+
+.productActions button {
+  margin-left: 15px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.editButton {
+  background-color: #ffc107;
+  color: black;
+}
+
+.editButton:hover {
+  background-color: #e0a800;
+}
+
+.removeButton {
+  background-color: #dc3545;
+  color: white;
+}
+
+.removeButton:hover {
+  background-color: #c82333;
+}
+

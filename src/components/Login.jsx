@@ -9,7 +9,7 @@ export function Login() {
                 <label htmlFor="email">E-Mail:</label>
                 <input type="text" id="email" name="email" required className={styles.input} />
 
-                 <label htmlFor="password">Senha:</label>
+                <label htmlFor="password">Senha:</label>
                 <input type="password" id="password" name="password" required className={styles.input} />
 
                 <button type="submit" className={styles.button}>Login</button>

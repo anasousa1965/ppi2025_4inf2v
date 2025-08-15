@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./ProductsManager.module.css";
 
 export function ProductsManager() {
-  const [products, setProducts] = useState([
+const [products, setProducts] = useState([
     { id: 1, title: "Base Líquida", price: 120, description: "Base líquida de cobertura média" },
     { id: 2, title: "Máscara de Cílios", price: 80, description: "Máscara para alongamento e volume" },
   ]);
@@ -22,17 +22,17 @@ export function ProductsManager() {
     }));
   };
 
-const handleSubmit = (e) => {
+  const handleSubmit = (e) => {
       e.preventDefault();
       if (formState.id) {
           setProducts((prevProducts) =>
               prevProducts.map((p) => (p.id === formState.id ? { ...p, ...formState } : p))
           );
-      } else {
+           } else {
           const newProduct = { ...formState, id: Date.now() };
           setProducts((prevProducts) => [...prevProducts, newProduct]);
       }
-      setFormState({ id: null, title: "", price: "", description: "" });
+       setFormState({ id: null, title: "", price: "", description: "" });
   };
 
   const handleRemove = (id) => {
@@ -49,7 +49,7 @@ const handleSubmit = (e) => {
     <div className={styles.container}>
       <h2>Gerenciamento de Produtos de Maquiagem</h2>
 
-      <div className={styles.formSection}>
+ <div className={styles.formSection}>
         <h3>{formState.id ? "Editar Produto" : "Adicionar Produto"}</h3>
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.formGroup}>
@@ -74,7 +74,7 @@ const handleSubmit = (e) => {
               onChange={handleChange}
               required
               className={styles.input}
-            />
+             />
           </div>
           <div className={styles.formGroup}>
             <label htmlFor="description">Descrição</label>
@@ -85,11 +85,11 @@ const handleSubmit = (e) => {
               onChange={handleChange}
               required
               className={styles.textarea}
-            />
+               />
           </div>
           <button type="submit" className={styles.button}>
             {formState.id ? "Salvar Alterações" : "Adicionar"}
-             </button>
+          </button>
           {formState.id && (
             <button
               type="button"
