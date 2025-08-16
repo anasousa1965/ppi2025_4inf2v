@@ -4,7 +4,7 @@ import { useState } from "react";
 export function Cart({ cart, setCart }) {
   const [selectedWarranty, setSelectedWarranty] = useState("none");
 
-  const groupedCart = cart.reduce((acc, product) => {
+const groupedCart = cart.reduce((acc, product) => {
     const existing = acc.find((item) => item.id === product.id);
     if (existing) {
       existing.quantity += 1;
@@ -53,7 +53,7 @@ export function Cart({ cart, setCart }) {
       {groupedCart.length === 0 ? (
         <p className={styles.empty}>Seu carrinho está vazio.</p>
       ) : (
-        <>
+         <>
           <div className={styles.grid}>
             <div className={styles.leftPanel}>
               <button className={styles.clearButton} onClick={clearCart}>
@@ -95,7 +95,7 @@ export function Cart({ cart, setCart }) {
                 <button className={styles.primary}>Continuar</button>
                 <button className={styles.secondary}>Voltar</button>
               </div>
-            </div>
+               </div>
           </div>
 
           <div className={styles.servicesFullWidth}>

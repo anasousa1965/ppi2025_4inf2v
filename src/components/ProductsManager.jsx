@@ -46,7 +46,7 @@ const handleSubmit = (e) => {
   };
 
   return (
-    <div className={styles.container}>
+     <div className={styles.container}>
       <h2>Gerenciamento de Produtos de Maquiagem</h2>
 
       <div className={styles.formSection}>

@@ -3,18 +3,13 @@
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  margin: 5rem 0;
   gap: 2rem;
 }
 
-.grid {
-  /* height: 100vh; */
+.productList {
   padding: 1rem 3rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-  grid-template-rows: repeat(auto-fit, min-content);
   gap: 3rem;
-
-  /* justify-content: center; */
-  /* align-content: center; */
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-rows: repeat(auto-fit, min-content);
 }

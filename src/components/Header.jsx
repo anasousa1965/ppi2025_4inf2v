@@ -12,14 +12,14 @@ export function Header({ cart }) {
         <h1>TRJ Megastore</h1>
       </Link>
 
-      
-     
-      <nav style={{ display: "flex", gap: "20px", alignItems: "center" }}>
+
+
+        <nav style={{ display: "flex", gap: "20px", alignItems: "center" }}>
         <Link to="/login" className={styles.loginButton}>
           Login
         </Link>
-        
-        <Link to="/products" className={styles.loginButton}>
+
+         <Link to="/products" className={styles.loginButton}>
         Gerenciar Produtos
         </Link>
 
