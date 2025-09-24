@@ -1,8 +1,13 @@
 import styles from "./Product.module.css";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
-export function Product({ product, addToCart }) {
+export function Product({ product }) {
+
+  const { addToCart } = useContext(CartContext);
+
   return (
-    <div key={product.id} className={styles.productCard}>
+    <div className={styles.productCard}>
       <img
         src={product.thumbnail}
         alt={product.title}
@@ -10,10 +15,17 @@ export function Product({ product, addToCart }) {
       />
       <h2 className={styles.productTitle}>{product.title}</h2>
       <p className={styles.productDescription}>{product.description}</p>
-      <p className={styles.productPrice}>${product.price}</p>
-      <button onClick={() => addToCart(product)} className={styles.productButton}>ADD TO CART</button>
+      <div className={styles.productQty}>
+        <p className={styles.productPrice}>${product.price}</p>
+      </div>
+      <button
+        className={styles.productButton}
+        onClick={() => {
+          addToCart(product);
+        }}
+      >
+        ADD TO CART
+      </button>
     </div>
-
-
   );
 }
