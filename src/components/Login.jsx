@@ -1,6 +1,8 @@
 import styles from "./Login.module.css";
 import { useState, useContext, useEffect } from "react";
 import { CartContext } from "../context/CartContext";
+import { Field } from "@base-ui-components/react/field";
+import { Form } from "@base-ui-components/react/form";
 import { EyeIcon, EyeOffIcon } from "lucide-react";
 import { toast, Bounce } from "react-toastify";
 import { CircularProgress } from "@mui/material";
@@ -47,7 +49,7 @@ export function Login({ value }) {
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
-               pauseOnHover: false,
+        pauseOnHover: false,
         progress: undefined,
         style: { fontSize: "1.5rem" },
         theme: localStorage.getItem("theme"),
@@ -63,7 +65,6 @@ export function Login({ value }) {
             closeOnClick: true,
             pauseOnHover: false,
             progress: undefined,
-        
             style: { fontSize: "1.5rem" },
             theme: localStorage.getItem("theme"),
             transition: Bounce,
@@ -84,17 +85,13 @@ export function Login({ value }) {
       }
     }
   }, [sessionMessage, sessionError]);
-
+  
   async function handleSubmit(e) {
     e.preventDefault();
+
     // Basic validation
-   // TODO: Fazer validação com REGEX
     const newErrors = {};
     if (!formValues.email) newErrors.email = "Email is required";
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (formValues.email && !emailRegex.test(formValues.email)) {
-      newErrors.email = "Invalid email format";
-    }
     if (!formValues.password) newErrors.password = "Password is required";
     if (mode === "register") {
       if (!formValues.username) newErrors.username = "Username is required";
@@ -243,15 +240,17 @@ export function Login({ value }) {
             "Register"
           )}
         </button>
-      <form className={styles.form} onSubmit={handleSubmit}>
-          
-    </form>
+      </Form>
+      {mode === "register" && (
+        <button onClick={() => setMode("signin")} className={styles.info}>
+          Already have an account? Click here!
+        </button>
       )}
       {mode === "signin" && (
         <button onClick={() => setMode("register")} className={styles.info}>
           Don't have an account? Click here!
         </button>
       )}
-     </div>
+    </div>
   );
 }
