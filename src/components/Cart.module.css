@@ -5,22 +5,18 @@
   padding: 1rem;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-    to bottom,
-    rgba(15, 21, 33, 255) 0%,
-    rgba(10, 20, 117, 255) 100%
-  );
+  background-color: var(--background);
   min-height: 100vh;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-template-rows: repeat(auto-fit, min-content);
-  color: rgb(37, 100, 234);
+  color: #265182;
   grid-template-areas:
     "title title"
     "main checkout";
-    grid-template-columns: 70vw 25vw;
-    grid-template-rows: 20rem auto;
-    
+  grid-template-columns: 70vw 25vw;
+  grid-template-rows: 20rem auto;
 }
+
 .title {
   font-size: 5rem;
   font-weight: bold;
@@ -28,65 +24,73 @@
   grid-area: title;
   text-align: center;
   height: 10rem;
+  color: var(--primary);
 }
 
 .cart h3 {
   font-size: 3rem;
   font-weight: bold;
+  color: var(--text);
 }
 
 .cart p {
-    font-size: 3rem;
-    font-weight: bold;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--text);
 }
+
 .cart button {
-  background-color: rgb(23, 54, 121);
-  color: rgb(37, 100, 234);
+  background-color: #4A90E2;
+  color: white;
   border: none;
   padding: 8px 16px;
   border-radius: 4px;
   cursor: pointer;
   font-size: 3rem;
+  transition: background-color 0.2s ease, transform 0.12s ease;
 }
 
 .cart button:hover {
-  background-color: rgb(17, 59, 151);
+  background-color: #3a78bf;
   transform: scale(1.05);
 }
 
 .cartItem {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0.5rem;
-    background-color: rgb(17, 31, 80);
-    border: 1px solid rgb(32, 59, 156);
-    border-radius: 8px;
-    margin-bottom: 2rem;
-    padding-right: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: var(--gray-100);
+  border: 1px solid #4A90E2;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  padding-right: 2rem;
+  color: var(--text);
 }
 
 .checkout {
   grid-area: checkout;
   align-self: start;
   padding-left: 2rem;
+  color: #4A90E2;
 }
+
 .checkout h3 {
   font-size: 2rem;
   font-weight: bold;
+  color: #4A90E2;
 }
-
-
 
 .cartList {
   grid-area: main;
   align-self: start;
 }
+
 .empty {
   text-align: center;
   grid-area: title;
   margin-top: 30rem;
-  
+  color: #4A90E2;
 }
