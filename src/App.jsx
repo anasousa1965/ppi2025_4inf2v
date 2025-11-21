@@ -18,8 +18,8 @@ export default function App() {
     <>
       <ToastContainer />
 
-      <SessionProvider>         {/* <-- ENVOLVE TUDO O QUE PRECISA DA SESSÃO */}
-        <CartProvider>          {/* <-- Mantém seu Carrinho funcionando */}
+      <SessionProvider>          
+        <CartProvider>          
           <Header />
 
           <Routes>
